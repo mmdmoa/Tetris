@@ -1,0 +1,6 @@
+.idea
+bin/
+.buildozer
+__pycache__
+core/__pycache__
+core/common/__pycache__
