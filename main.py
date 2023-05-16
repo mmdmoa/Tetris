@@ -3,8 +3,8 @@ import core.common.resources as cr
 import gui.common.resources as guiCr
 
 from core.event_holder import EventHolder
-from gui.menu import Menu as guiMenu
-from gui.drawables.page import Page
+# from gui.menu import Menu as guiMenu
+# from gui.drawables.page import Page
 
 pg.init()
 scale = 50
@@ -26,28 +26,28 @@ edges[2].y = cr.screen.get_height() - edges[2].h
 edges[3].y = cr.screen.get_height() - edges[3].h
 
 
-menu = guiMenu(cr.screen,cr.event_holder)
-
-font = pg.font.SysFont("monospace",30)
-
-rect = cr.screen.get_rect()
-rect.x += rect.w * 0.1
-rect.y += rect.h * 0.1
-rect.w -= rect.w * 0.1 * 2
-rect.h -= rect.h * 0.1 * 2
-
-texts = [
-    ["0;Play Game"],
-    ["1;Settings"],
-    ["2;Leaderboards"],
-    ["3;Stats"],
-    ["4;Quit"]
-]
-
-page = Page(rect,texts,font)
-
-menu.add_page(page)
-menu.set_active(0)
+# menu = guiMenu(cr.screen,cr.event_holder)
+#
+# font = pg.font.SysFont("monospace",30)
+#
+# rect = cr.screen.get_rect()
+# rect.x += rect.w * 0.1
+# rect.y += rect.h * 0.1
+# rect.w -= rect.w * 0.1 * 2
+# rect.h -= rect.h * 0.1 * 2
+#
+# texts = [
+#     ["0;Play Game"],
+#     ["1;Settings"],
+#     ["2;Leaderboards"],
+#     ["3;Stats"],
+#     ["4;Quit"]
+# ]
+#
+# page = Page(rect,texts,font)
+#
+# menu.add_page(page)
+# menu.set_active(0)
 
 
 while not cr.event_holder.should_quit:
@@ -59,7 +59,7 @@ while not cr.event_holder.should_quit:
         for rect in edges:
             pg.draw.rect(cr.screen,"black",rect,width=2)
 
-    menu.check_events()
-    menu.render()
+    # menu.check_events()
+    # menu.render()
 
     pg.display.update()
